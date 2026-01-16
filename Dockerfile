@@ -1,14 +1,31 @@
-# Use official OpenJDK 17 image
-FROM eclipse-temurin:17-jdk
+# ---------- BUILD STAGE ----------
+FROM eclipse-temurin:17-jdk AS build
 
-# Set working directory
 WORKDIR /app
 
-# Copy built jar
-COPY target/docuconverter-0.0.1-SNAPSHOT.jar app.jar
+# Copy Maven files
+COPY pom.xml .
+COPY mvnw .
+COPY .mvn .mvn
 
-# Expose port 8080
+# Download dependencies
+RUN chmod +x mvnw && ./mvnw dependency:go-offline
+
+# Copy source code
+COPY src src
+
+# Build jar
+RUN ./mvnw clean package -DskipTests
+
+
+# ---------- RUN STAGE ----------
+FROM eclipse-temurin:17-jdk
+
+WORKDIR /app
+
+# Copy jar from build stage
+COPY --from=build /app/target/*.jar app.jar
+
 EXPOSE 8080
 
-# Run the jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
