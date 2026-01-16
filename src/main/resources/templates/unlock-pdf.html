@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unlock PDF</title>
+  <link rel="icon" type="image/png" href="/images/D.png">
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f0f4ff;
+        padding: 30px;
+    }
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+    form {
+        max-width: 500px;
+        margin: auto;
+        background: #fff;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    input[type="file"], input[type="password"] {
+        display: block;
+        width: 100%;
+        margin: 15px 0;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+    }
+    button {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background: #4f46e5;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background: #3730a3;
+    }
+  </style>
+</head>
+<body>
+<!--<h1> UpComing........</h1>-->
+<h2>Unlock PDF</h2>
+
+<form method="post" action="/unlock-pdf/convert" enctype="multipart/form-data">
+  <input type="file" name="file" accept=".pdf" required>
+  <input type="password" name="password" placeholder="Enter PDF password" required>
+  <button type="submit">Unlock PDF</button>
+</form>
+
+</body>
+</html>

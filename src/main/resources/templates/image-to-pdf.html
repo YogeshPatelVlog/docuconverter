@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <!-- BASIC SEO -->
+    <title>Image to PDF Converter Online – Free JPG & PNG to PDF | DocuConvert</title>
+    <meta name="description"
+          content="Convert JPG and PNG images to PDF online for free. Fast, secure Image to PDF converter. No signup required. Files deleted automatically after conversion.">
+    <meta name="keywords"
+          content="image to pdf, jpg to pdf, png to pdf, online pdf converter, free image to pdf, docuconvert">
+    <meta name="author" content="DocuConvert">
+
+    <!-- MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/images/D.png">
+
+    <!-- STYLE -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(120deg, #4facfe, #00f2fe);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        header h2 {
+            color: #e63946;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c7be5;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #2c7be5;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1a5dcc;
+        }
+
+        .message {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: red;
+        }
+
+        .info-section {
+            margin-top: 35px;
+            font-size: 14px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            header h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<header>
+    <h2>DocuConvert</h2>
+</header>
+
+<div class="container">
+
+    <h1>Image to PDF Converter</h1>
+    <p style="text-align:center;">
+        Convert JPG and PNG images into a high-quality PDF file instantly.
+    </p>
+
+    <!-- TOOL FORM -->
+    <form method="post" enctype="multipart/form-data" th:action="@{/image-to-pdf}">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Convert to PDF</button>
+    </form>
+
+    <div class="message" th:if="${error}" th:text="${error}"></div>
+    <div class="message" th:if="${success}" style="color:green;">
+        PDF created successfully!
+    </div>
+
+    <p style="margin-top:15px; font-size:12px; color:#888; text-align:center;">
+        Maximum file size: 20MB. Uploaded files are automatically deleted after conversion.
+    </p>
+
+    <!-- SEO + ADSENSE CONTENT -->
+    <div class="info-section">
+
+        <h3>How does this Image to PDF tool work?</h3>
+        <p>
+            DocuConvert allows you to upload an image file (JPG or PNG) and convert it into a PDF document
+            directly in your browser. The conversion process is fast, secure, and does not require any
+            registration or login.
+        </p>
+
+        <h3>How to use Image to PDF Converter?</h3>
+        <ul>
+            <li>Select an image file from your device</li>
+            <li>Click on <strong>Convert to PDF</strong></li>
+            <li>Your PDF file will be generated instantly</li>
+            <li>Download and use your PDF</li>
+        </ul>
+
+        <h3>Why choose DocuConvert?</h3>
+        <ul>
+            <li>100% free Image to PDF converter</li>
+            <li>No watermark added</li>
+            <li>Secure and privacy-focused</li>
+            <li>Files are deleted automatically</li>
+            <li>Works on mobile, tablet, and desktop</li>
+        </ul>
+
+        <h3>Privacy & Security</h3>
+        <p>
+            Your privacy is important to us. All uploaded files are processed automatically and deleted
+            from our servers immediately after conversion. We do not store or share your files.
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 DocuConvert | Free Online PDF Tools
+</footer>
+
+</body>
+</html>

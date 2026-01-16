@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DocuConvert – Online PDF Tools</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Free Online Document Converter | Image to PDF, PDF to Excel</title>
+
+  <meta name="description"
+        content="Free online document converter. Convert Image to PDF, PDF to Excel, Word to PDF, compress PDF securely and fast. No registration required.">
+
+  <meta name="keywords"
+        content="image to pdf, pdf to excel, word to pdf, compress pdf, document converter online">
+
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/png" href="/images/D.png">
+
+
+  <style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        color: #333;
+    }
+
+    /* HEADER */
+    header {
+        background: #ffffff;
+        padding: 15px 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    header h2 {
+        color: #e63946;
+        margin: 0;
+        font-size: 22px;
+    }
+
+    nav a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: #555;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    /* HERO */
+    .hero {
+        text-align: center;
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        color: #666;
+        max-width: 600px;
+        margin: auto;
+        font-size: 15px;
+    }
+
+    /* TOOLS GRID */
+    .tools {
+        max-width: 1100px;
+        margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .tool-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 22px;
+        text-align: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        transition: transform 0.2s ease;
+    }
+
+    .tool-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .tool-icon {
+        font-size: 34px;
+        margin-bottom: 12px;
+    }
+
+    .tool-card h3 {
+        margin-bottom: 8px;
+        font-size: 18px;
+    }
+
+    .tool-card p {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .tool-card a {
+        display: block;
+        margin-top: 15px;
+        padding: 10px;
+        background: #e63946;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    .tool-card a:hover {
+        background: #c92c3a;
+    }
+
+
+
+    /* FOOTER */
+    footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 13px;
+        color: #888;
+    }
+
+    /* MOBILE FIX */
+    @media (max-width: 600px) {
+        .hero h1 {
+            font-size: 22px;
+        }
+
+        nav {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 10px;
+        }
+    }
+    /* EXTRA BHARA-BHARA SECTION */
+.extra-section {
+    background: #ffffff;
+    padding: 70px 20px;
+}
+
+.extra-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.extra-intro {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.extra-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.extra-box {
+    background: #f8f9fb;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.extra-box img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.extra-box h3 {
+    margin-bottom: 10px;
+}
+
+.extra-box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.extra-text {
+    max-width: 1000px;
+    margin: 60px auto 0;
+    line-height: 1.8;
+    color: #444;
+}
+    .site-footer {
+    background: #1f1f2b;
+    color: #ccc;
+    padding: 60px 10% 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer-col a {
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-col a:hover {
+    color: #4da6ff;
+}
+
+.footer-col p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+}
+
+.social-icons a {
+    margin-left: 15px;
+    color: #bbb;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.social-icons a:hover {
+    color: #fff;
+}
+.coming-soon {
+  color: red;
+  font-size: 20px;
+}
+    .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+/* FEEDBACK SECTION */
+.feedback-section {
+    background: #f8f9fb;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.feedback-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.feedback-subtitle {
+    color: #555;
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+.feedback-form {
+    max-width: 600px;
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.feedback-form textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+.feedback-form button {
+    background: #e63946;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background: #c92c3a;
+}
+
+
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-area">
+    <img src="/images/D.png" alt="DocuConvert Logo">
+    <h2>DocuConvert</h2>
+  </div>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/privacy">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 style="font-size: 40px;">All your document tools in one place</h1>
+  <h3 style="font-size: 18px;"> Convert, compress, edit, and manage PDFs effortlessly on any device.
+    Secure, fast, and user-friendly tools designed to simplify your workflow and save you time.</h3>
+
+</section>
+
+
+<section class="tools" id="tools">
+
+  <div class="tool-card">
+    <div class="tool-icon">🖼️➡️📄</div>
+    <h3>Image to PDF</h3>
+    <p>Convert JPG images into PDF.</p>
+    <a href="/image-to-pdf">Use Tool</a>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">📄➡️🖼️</div>
+    <h3>PDF to Image</h3>
+    <p>Extract images from PDF files.</p>
+    <a href="/pdf-to-image">Use Tool</a>
+  </div>
+
+
+  <div class="tool-card">
+    <div class="tool-icon">🗃️➡️📄</div>
+    <h3>MS Word to PDF</h3>
+    <p>Convert MS Word File into PDF.</p>
+    <a href="/word-to-pdf">Use Tool</a>
+  </div>
+
+
+  <div class="tool-card">
+    <div class="tool-icon">📄➡️📄</div>
+    <h3>HTML To PDF</h3>
+    <p>Convert HTML To PDF Files</p>
+    <a href="/html-to-pdf">Use Tool</a>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">📉</div>
+    <h3>Compress any type of PDF</h3>
+    <p>Reduce PDF file size.</p>
+    <a href="/compress-pdf">Use Tool</a>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🔓</div>
+    <h3>Unlock any type of PDF file</h3>
+    <p>Unlock PDF</p>
+    <span class="coming-soon">Coming Soon</span>
+  </div>
+
+
+  <div class="tool-card">
+    <div class="tool-icon">🔢</div>
+    <h3>Add Page Number in PDF</h3>
+    <p>Add Page Number</p>
+    <span class="coming-soon">Coming Soon</span>
+  </div>
+
+  <div class="tool-card">
+    <div class="tool-icon">🔐</div>
+    <h3>Protect PDF From Password</h3>
+    <p>Protect Pdf </p>
+    <span class="coming-soon">Coming Soon</span>
+  </div>
+
+</section>
+<!-- EXTRA CONTENT SECTION -->
+<section class="extra-section">
+
+  <h2>Convert Documents Online — Fast, Free & Secure</h2>
+
+  <p class="extra-intro">
+    Our online document converter helps you manage files easily.
+    Convert images, PDFs, Word and Excel documents in seconds without installing any software.
+  </p>
+
+  <div class="extra-grid">
+
+    <div class="extra-box">
+      <img src="/images/secure.png">
+      <h3>100% Secure</h3>
+      <p>
+        Your files are processed automatically and deleted after conversion.
+        We never store or share your documents.
+      </p>
+    </div>
+
+    <div class="extra-box">
+      <img src="/images/cloud.png">
+      <h3>Cloud Based</h3>
+      <p>
+        Convert files directly in your browser.
+        Works smoothly on mobile, tablet and desktop devices.
+      </p>
+    </div>
+
+    <div class="extra-box">
+      <img src="/images/speed.png">
+      <h3>Fast Conversion</h3>
+      <p>
+        Advanced processing ensures quick conversion
+        while maintaining high file quality.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="extra-text">
+
+    <h3>Why Use Our Free Document Converter?</h3>
+    <p>
+      Whether you are a student, office worker, or business professional,
+      our tools help you convert documents quickly and easily.
+    </p>
+
+    <p>
+      You can convert Image to PDF, PDF to Excel, Word to PDF,
+      compress PDF files, and extract images from PDF documents.
+    </p>
+
+    <p>
+      No registration is required. Just upload your file, convert it,
+      and download the result instantly.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- FEEDBACK SECTION -->
+<section class="feedback-section" style="background:#f8f9fb;padding:60px 20px;border-radius:14px;margin-top:50px;">
+  <div style="max-width:600px;margin:auto;text-align:center;">
+    <h2 style="font-size:28px;color:#2c7be5;margin-bottom:10px;">We Value Your Feedback</h2>
+    <p class="feedback-subtitle" style="color:#555;margin-bottom:30px;line-height:1.6;">
+      Help us improve DocuConvert. Share your suggestions, issues, or feature requests.
+    </p>
+
+    <form class="feedback-form" method="post" action="/feedback/submit" style="display:flex;flex-direction:column;gap:15px;">
+      <input type="text" name="name" placeholder="Your Name (optional)"
+             style="padding:12px;border-radius:8px;border:1px solid #ccc;font-size:14px;width:100%;">
+
+      <input type="email" name="email" placeholder="Your Email (optional)"
+             style="padding:12px;border-radius:8px;border:1px solid #ccc;font-size:14px;width:100%;">
+
+      <textarea name="message" placeholder="Write your feedback here..." required
+                style="padding:12px;border-radius:8px;border:1px solid #ccc;font-size:14px;width:100%;height:120px;resize:vertical;"></textarea>
+
+      <button type="submit"
+              style="padding:12px 25px;background:#4facfe;color:#fff;border:none;border-radius:8px;font-size:16px;cursor:pointer;transition:0.3s;">
+        Submit Feedback
+      </button>
+    </form>
+  </div>
+</section>
+
+
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-col">
+      <h4>PRODUCT</h4>
+      <a href="/">Home</a>
+      <a href="/#tools">Tools</a>
+      <a href="/features">Features</a>
+      <a href="/faq">FAQ</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>CONVERTERS</h4>
+      <a href="/image-to-pdf">Image to PDF</a>
+      <a href="/pdf-to-image">PDF to Image</a>
+      <a href="/word-to-pdf">Word to PDF</a>
+<!--      <a href="/pdf-to-excel">PDF to Excel</a>-->
+      <a href="/compress-pdf">Compress PDF</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>LEGAL</h4>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms & Conditions</a>
+      <a href="/contact">Contact Us</a>
+      <a href="/about">About Us</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>SECURITY</h4>
+      <p>🔒 SSL Encrypted</p>
+      <p>🛡️ Files auto-deleted</p>
+      <p>📄 ISO-based processing</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2026 DocConverter • Free Online Document Converter | Developed by Yogesh Patel
+    </p>
+
+    <div class="social-icons">
+<!--      <a href="#">X</a>-->
+<!--      <a href="#">Facebook</a>-->
+      <a href="https://www.linkedin.com/in/yogesh--patel/">LinkedIn</a>
+      <a href="https://www.instagram.com/patel_yogesh__/">Instagram</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

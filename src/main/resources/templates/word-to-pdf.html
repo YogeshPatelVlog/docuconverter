@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- SEO -->
+    <title>Word to PDF Converter Online – Free DOCX to PDF | DocuConvert</title>
+    <meta name="description"
+          content="Convert Microsoft Word documents (DOCX) to PDF online for free. Fast, secure Word to PDF converter with automatic file deletion.">
+    <meta name="keywords"
+          content="word to pdf, docx to pdf, convert word to pdf online, ms word to pdf, docuconvert">
+    <meta name="author" content="DocuConvert">
+
+    <!-- MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/images/D.png">
+
+    <!-- STYLE -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(120deg, #4facfe, #00f2fe);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        header h2 {
+            color: #e63946;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c7be5;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border: 2px dashed #4facfe;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+
+        button {
+            background: #2c7be5;
+            color: #fff;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1a5dcc;
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 14px;
+            color: red;
+        }
+
+        .info-section {
+            margin-top: 35px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #777;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            header h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h2>DocuConvert</h2>
+</header>
+
+<div class="container">
+
+    <h1>Word to PDF Converter</h1>
+    <p class="subtitle">
+        Convert Microsoft Word (DOCX) documents into PDF files easily.
+    </p>
+
+    <!-- TOOL FORM -->
+    <form method="post"
+          enctype="multipart/form-data"
+          action="/word-to-pdf/convert">
+
+        <input type="file"
+               name="file"
+               accept=".docx"
+               required>
+
+        <button type="submit">
+            Convert to PDF
+        </button>
+    </form>
+
+    <div class="message" th:if="${error}" th:text="${error}"></div>
+    <div class="message" th:if="${success}" style="color:green;">
+        PDF created successfully!
+    </div>
+
+    <p style="margin-top:15px; font-size:12px; color:#888;">
+        Maximum file size: 20MB. Files are deleted automatically after conversion.
+    </p>
+
+    <!-- SEO + ADSENSE CONTENT -->
+    <div class="info-section">
+
+        <h3>How does Word to PDF conversion work?</h3>
+        <p>
+            This tool converts your Microsoft Word documents (DOCX format)
+            into PDF files while preserving layout, text formatting, and images.
+            The process is quick and does not require any installation.
+        </p>
+
+        <h3>How to convert Word to PDF?</h3>
+        <ul>
+            <li>Select a DOCX file from your device</li>
+            <li>Click on <strong>Convert to PDF</strong></li>
+            <li>Your PDF will be generated instantly</li>
+            <li>Download and share your PDF file</li>
+        </ul>
+
+        <h3>Why use DocuConvert?</h3>
+        <ul>
+            <li>Free online Word to PDF converter</li>
+            <li>No watermark added</li>
+            <li>Fast and secure processing</li>
+            <li>Works on mobile and desktop</li>
+            <li>No registration required</li>
+        </ul>
+
+        <h3>Privacy & Security</h3>
+        <p>
+            We respect your privacy. Uploaded Word documents are processed
+            automatically and permanently deleted after conversion.
+            We never store or share your files.
+        </p>
+
+    </div>
+
+    <footer>
+        © 2026 DocuConvert | Free Online Document Conversion Tools
+    </footer>
+
+</div>
+
+</body>
+</html>
