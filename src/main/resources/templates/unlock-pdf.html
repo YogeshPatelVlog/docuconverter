@@ -1,62 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Unlock PDF</title>
+
+  <!-- BASIC SEO -->
+  <title>Unlock PDF Online – Remove PDF Password Free | DocuConvert</title>
+  <meta name="description"
+        content="Unlock password-protected PDF files online for free. Remove PDF password instantly. Secure and fast PDF unlocker.">
+  <meta name="keywords"
+        content="unlock pdf, remove pdf password, pdf password remover, free pdf unlocker">
+  <meta name="author" content="DocuConvert">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTWT82N4');</script>
+  <!-- End Google Tag Manager -->
+  <!-- MOBILE -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="/images/D.png">
+
+  <!-- STYLE (SAME AS PREVIOUS TEMPLATE) -->
   <style>
     body {
+        margin: 0;
         font-family: Arial, sans-serif;
-        background: #f0f4ff;
-        padding: 30px;
-    }
-    h2 {
-        text-align: center;
+        background: #f5f7fa;
         color: #333;
     }
-    form {
-        max-width: 500px;
-        margin: auto;
+
+    header {
+        background: linear-gradient(120deg, #4facfe, #00f2fe);
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    header h2 {
+        color: #e63946;
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 40px auto;
         background: #fff;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-    input[type="file"], input[type="password"] {
-        display: block;
-        width: 100%;
-        margin: 15px 0;
-        padding: 10px;
-        border-radius: 8px;
-        border: 1px solid #ccc;
+
+    h1 {
+        text-align: center;
+        color: #2c7be5;
     }
-    button {
-        display: block;
+
+    p {
+        line-height: 1.6;
+        color: #555;
+    }
+
+    form {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    input[type="file"],
+    input[type="password"] {
         width: 100%;
         padding: 12px;
-        background: #4f46e5;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+    }
+
+    button {
+        background: #2c7be5;
         color: #fff;
-        font-size: 16px;
-        font-weight: bold;
         border: none;
-        border-radius: 10px;
+        padding: 12px 28px;
+        border-radius: 6px;
+        font-size: 16px;
         cursor: pointer;
         transition: 0.3s;
     }
+
     button:hover {
-        background: #3730a3;
+        background: #1a5dcc;
+    }
+
+    .message {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 14px;
+        color: red;
+    }
+
+    .info-section {
+        margin-top: 35px;
+        font-size: 14px;
+    }
+
+    ul {
+        padding-left: 18px;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+        padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+        .container {
+            margin: 20px;
+            padding: 20px;
+        }
+
+        header h2 {
+            font-size: 20px;
+        }
     }
   </style>
+
 </head>
 <body>
-<!--<h1> UpComing........</h1>-->
-<h2>Unlock PDF</h2>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTWT82N4"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+  <h2>DocuConvert</h2>
+</header>
 
-<form method="post" action="/unlock-pdf/convert" enctype="multipart/form-data">
-  <input type="file" name="file" accept=".pdf" required>
-  <input type="password" name="password" placeholder="Enter PDF password" required>
-  <button type="submit">Unlock PDF</button>
-</form>
+<div class="container">
+
+  <h1>Unlock PDF</h1>
+  <p style="text-align:center;">
+    Remove password protection from PDF files easily and securely.
+  </p>
+
+  <!-- TOOL FORM -->
+  <form method="post" enctype="multipart/form-data" action="/unlock-pdf/convert">
+    <input type="file" name="file" accept=".pdf" required>
+    <input type="password" name="password" placeholder="Enter PDF password" required>
+    <button type="submit">Unlock PDF</button>
+  </form>
+
+  <div class="message" th:if="${error}" th:text="${error}"></div>
+  <div class="message" th:if="${success}" style="color:green;">
+    PDF unlocked successfully!
+  </div>
+
+  <p style="margin-top:15px; font-size:12px; color:#888; text-align:center;">
+    Maximum file size: 20MB. Files are deleted automatically after processing.
+  </p>
+
+  <!-- INFO / SEO CONTENT -->
+  <div class="info-section">
+
+    <h3>How does Unlock PDF work?</h3>
+    <p>
+      Upload your password-protected PDF file and enter the correct password.
+      DocuConvert removes the password and gives you a new unlocked PDF file instantly.
+    </p>
+
+    <h3>How to unlock a PDF?</h3>
+    <ul>
+      <li>Select the locked PDF file</li>
+      <li>Enter the correct PDF password</li>
+      <li>Click <strong>Unlock PDF</strong></li>
+      <li>Download the unlocked PDF file</li>
+    </ul>
+
+    <h3>Why use DocuConvert?</h3>
+    <ul>
+      <li>100% free PDF unlocker</li>
+      <li>No watermark</li>
+      <li>Fast and secure</li>
+      <li>Works on all devices</li>
+    </ul>
+
+    <h3>Privacy & Security</h3>
+    <p>
+      Your files are processed securely and deleted automatically after unlocking.
+      We do not store or share your data.
+    </p>
+
+  </div>
+
+</div>
+
+<footer>
+  © 2026 DocuConvert | Free Online PDF Tools
+</footer>
 
 </body>
 </html>

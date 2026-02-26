@@ -19,7 +19,6 @@ public class PdfToImageService {
         if (file == null || file.isEmpty()) {
             throw new IllegalArgumentException("File is empty");
         }
-
         if (!file.getOriginalFilename().toLowerCase().endsWith(".pdf")) {
             throw new IllegalArgumentException("Only PDF files allowed");
         }
@@ -31,7 +30,6 @@ public class PdfToImageService {
         // PDFBox 2.x loading
         PDDocument document = PDDocument.load(tempPdf);
         PDFRenderer renderer = new PDFRenderer(document);
-
         File zipFile = File.createTempFile("pdf-images-", ".zip");
         ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(zipFile));
 

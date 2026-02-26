@@ -1,26 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Add Page Numbers</title>
+
+    <!-- BASIC SEO -->
+    <title>Add Page Numbers to PDF Online – Free PDF Tool | DocuConvert</title>
+    <meta name="description"
+          content="Add page numbers to PDF online for free. Automatically insert page numbers into PDF files. Fast, secure and no signup required.">
+    <meta name="keywords"
+          content="add page numbers pdf, pdf page numbering, number pdf pages, free pdf tool">
+    <meta name="author" content="DocuConvert">
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTWT82N4');</script>
+    <!-- End Google Tag Manager -->
+    <!-- MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="/images/D.png">
+
+    <!-- STYLE (SAME AS PREVIOUS TEMPLATE) -->
+
     <style>
-        body { font-family: Arial, sans-serif; background: #f4f4f4; text-align: center; padding: 50px; }
-        h2 { color: #333; }
-        form { background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); display: inline-block; }
-        input[type=file] { padding: 10px; }
-        button { padding: 10px 20px; margin-top: 20px; background: #007bff; color: #fff; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #0056b3; }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(120deg, #4facfe, #00f2fe);
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        header h2 {
+            color: #e63946;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c7be5;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #2c7be5;
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1a5dcc;
+        }
+
+        .message {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: red;
+        }
+
+        .info-section {
+            margin-top: 35px;
+            font-size: 14px;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            header h2 {
+                font-size: 20px;
+            }
+        }
     </style>
+
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTWT82N4"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+    <h2>DocuConvert</h2>
+</header>
 
-<h2>Add Page Numbers to PDF</h2>
+<div class="container">
 
-<form method="post" action="/add-page-numbers/convert" enctype="multipart/form-data">
-    <input type="file" name="file" accept=".pdf" required>
-    <br>
-    <button type="submit">Add Page Numbers</button>
-</form>
+    <h1>Add Page Numbers to PDF</h1>
+    <p style="text-align:center;">
+        Automatically add page numbers to your PDF file in seconds.
+    </p>
+
+    <!-- TOOL FORM -->
+    <form method="post" enctype="multipart/form-data" action="/add-page-numbers-pdf/convert">
+        <input type="file" name="file" accept=".pdf" required>
+        <button type="submit">Add Page Numbers</button>
+    </form>
+
+    <div class="message" th:if="${error}" th:text="${error}"></div>
+    <div class="message" th:if="${success}" style="color:green;">
+        Page numbers added successfully!
+    </div>
+
+    <p style="margin-top:15px; font-size:12px; color:#888; text-align:center;">
+        Maximum file size: 20MB. Files are deleted automatically after processing.
+    </p>
+
+    <!-- INFO / SEO CONTENT -->
+    <div class="info-section">
+
+        <h3>How does Add Page Numbers work?</h3>
+        <p>
+            This tool adds page numbers automatically to each page of your PDF file.
+            The page numbers are placed at the bottom center for a clean and professional look.
+        </p>
+
+        <h3>How to add page numbers to a PDF?</h3>
+        <ul>
+            <li>Select your PDF file</li>
+            <li>Click <strong>Add Page Numbers</strong></li>
+            <li>Wait a few seconds</li>
+            <li>Download your updated PDF</li>
+        </ul>
+
+        <h3>Why choose DocuConvert?</h3>
+        <ul>
+            <li>Free and easy-to-use PDF tool</li>
+            <li>No watermark added</li>
+            <li>Fast processing</li>
+            <li>Secure and privacy-focused</li>
+            <li>Works on all devices</li>
+        </ul>
+
+        <h3>Privacy & Security</h3>
+        <p>
+            Your files are processed securely and deleted automatically after conversion.
+            We do not store or share your documents.
+        </p>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 DocuConvert | Free Online PDF Tools
+</footer>
 
 </body>
 </html>

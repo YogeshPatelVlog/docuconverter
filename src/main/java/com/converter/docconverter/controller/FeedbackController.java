@@ -27,8 +27,7 @@ public class FeedbackController {
 
             // Create and send email
             SimpleMailMessage mail = new SimpleMailMessage();
-            mail.setTo("yourgmail@gmail.com"); // <-- Replace with your Gmail
-            mail.setSubject("New Feedback from DocuConvert");
+            mail.setTo("patelreeta044@gmail.com"); //
             mail.setText(feedbackMessage);
 
             mailSender.send(mail);
